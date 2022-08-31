@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_kalkulator_bmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KalKulator BMI"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_umur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="60dp"
+        android:text="Umur"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_kalkulator_bmi" />
+
+    <EditText
+        android:id="@+id/edt_umur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:hint="Input Umur"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_umur"
+        app:layout_constraintTop_toBottomOf="@+id/tv_kalkulator_bmi" />
+
+    <TextView
+        android:id="@+id/tv_tinggi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:inputType="number"
+        android:text="Tinggi Badan"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_umur"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_umur" />
+
+    <EditText
+        android:id="@+id/edt_tinggi"
+        android:layout_width="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="Input Tinggi"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_tinggi"
+        app:layout_constraintTop_toBottomOf="@+id/edt_umur" />
+
+    <TextView
+        android:id="@+id/tv_berat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:text="Berat Badan"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tinggi"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tinggi" />
+
+    <EditText
+        android:id="@+id/edt_berat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="Input Berat"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_berat"
+        app:layout_constraintTop_toBottomOf="@+id/edt_tinggi" />
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="36dp"
+        android:text="Hitung"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_berat" />
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:text="Reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toEndOf="@+id/btn_calculate"
+        app:layout_constraintTop_toBottomOf="@+id/edt_berat" />
+
+    <TextView
+        android:id="@+id/tv_result_umur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:text="umur anda :"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_calculate" />
+
+    <TextView
+        android:id="@+id/tv_result_tinggi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="tinggi anda :"
+        app:layout_constraintEnd_toEndOf="@+id/tv_result_umur"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/tv_result_umur"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result_umur" />
+
+    <TextView
+        android:id="@+id/tv_result_berat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="berat badan :"
+        app:layout_constraintEnd_toEndOf="@+id/tv_result_tinggi"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_result_tinggi"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result_tinggi" />
+
+    <TextView
+        android:id="@+id/tv_result_bmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="BMI anda : "
+        app:layout_constraintEnd_toEndOf="@+id/tv_result_berat"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toStartOf="@+id/tv_result_berat"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result_berat" />
+
+    <TextView
+        android:id="@+id/tv_result_kategori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="kategori :"
+        app:layout_constraintEnd_toEndOf="@+id/tv_result_bmi"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="@+id/tv_result_bmi"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result_bmi" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
